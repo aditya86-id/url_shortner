@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import SHortURL
+from .models import ShortURL
 
 # Register your models here.
 
 
-admin.site.register(SHortURL)
+admin.site.register(ShortURL)
