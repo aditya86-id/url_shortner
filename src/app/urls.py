@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from urlshort.views import home, createSHortURL, redirect
 
 urlpatterns = [
     path('', include('urlshort.urls')),
     path('admin/', admin.site.urls),
+    path('create/', createSHortURL, name='create_short_url'),
+    path('<str:url>', redirect, name='redirect'),
 ]
