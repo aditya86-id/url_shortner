@@ -5,4 +5,8 @@ class SHortURL(models.Model):
     original_url = models.URLField(max_length=700)
     time_date_created = models.DateTimeField()
     short_url = models.CharField(max_length=100)
+
+
+    def __str__(self):
+        return self.original_url
     
