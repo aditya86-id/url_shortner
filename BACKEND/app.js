@@ -11,7 +11,7 @@ import cors from "cors"
 import { attachUser } from "./src/utils/attachUser.js";
 import cookieParser from "cookie-parser"
 
-dotenv.config("./.env")
+//dotenv.config("./.env")
 
 const app = express();
 
@@ -27,9 +27,10 @@ app.use(cookieParser())
 
 app.use(attachUser)
 
-app.get("/",()=>{
-    console.log("its working fine")
-})
+app.get("/", (req, res) => {
+    res.send("Backend is running 🚀");
+});
+
 
 
 app.use("/api/auth",auth_routes)
