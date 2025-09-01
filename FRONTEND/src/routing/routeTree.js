@@ -8,9 +8,9 @@ export const rootRoute = createRootRoute({
     component: RootLayout
 })
 
-export const routeTree =rootRoute.addChildren([
+export const routeTree =rootRoute.addChildren([ 
+    authRoute,
     homePageRoute, 
-    authRoute, 
     dasboardRoute
 ])
 

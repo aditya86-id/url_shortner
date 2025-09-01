@@ -26,8 +26,13 @@ app.use(cookieParser())
 
 app.use(attachUser)
 
-app.use("/api/user",user_routes)
+app.get("/",()=>{
+    console.log("its working fine")
+})
+
+
 app.use("/api/auth",auth_routes)
+app.use("/api/user",user_routes)
 app.use("/api/create",short_url)
 app.get("/:id",redirectFromShortUrl)
 
